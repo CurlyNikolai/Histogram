@@ -2,4 +2,4 @@
 
 Simple histogram application.
 
-Doxygen documentation can be found at DoxyDocumentation/html/index.html.
+Doxygen documentation can be viewed by opening DoxyDocumentation/html/index.html.
