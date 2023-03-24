@@ -1,6 +1,8 @@
 #include "Histogram.h"
 #include "RandomEintegergenerator.h"
 #include <iostream>
+#include <string>
+#include <cstdio>
 
 int main()
 {
@@ -24,4 +26,8 @@ int main()
 	h2.displayInfo();
 	h2.displayDistribution();
 
+	std::cout << "Press enter to exit" << std::endl;
+	char a = std::getchar();
+
+	return 0;
 }
