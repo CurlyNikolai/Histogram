@@ -12,9 +12,10 @@ using namespace Hist;
 class Histogram : public HistogramBase
 {
 public:
-	//Histogram();
+	Histogram() : HistogramBase(std::make_unique<Logger>()) {};
 	Histogram(std::unique_ptr<Logger> logger) : HistogramBase(move(logger)) {};
 	~Histogram() {};
+
 	void add(EInteger) override;
 	void add(int number);
 	EInteger getMode() const override;
