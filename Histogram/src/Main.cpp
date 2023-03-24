@@ -5,18 +5,23 @@
 int main()
 {
 	RandomEintegerGenerator rng;
-	Histogram h = Histogram();
 
+	Histogram h1 = Histogram();
 	for (int i = 0; i < 100; i++)
 	{
-		//h.add(rng(Uniform));
-		h.add(rng(Binomial));
+		h1.add(rng(Uniform));
 	}
 	
-	std::cout << "mode: " << h.getMode() << std::endl;
-	std::cout << "min: " << h.getMinValue() << std::endl;
-	std::cout << "max: " << h.getMaxValue() << std::endl;
-	
-	h.displayDistribution();
+	h1.displayInfo();
+	h1.displayDistribution();
+
+	Histogram h2 = Histogram();
+	for (int i = 0; i < 100; i++)
+	{
+		h2.add(rng(Binomial));
+	}
+
+	h2.displayInfo();
+	h2.displayDistribution();
 
 }

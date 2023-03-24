@@ -60,9 +60,21 @@ EInteger Histogram::getMaxValue() const
 
 void Histogram::displayDistribution()
 {
-	std::cout << "DISTRIBUTION:" << std::endl;
+	std::cout << "\nDISTRIBUTION:" << std::endl;
+	std::cout << std::string(counts[getMode()] + 5, '-') << std::endl;
 	for (int i = 0; i < sizeof(counts) / sizeof(int); i++)
 	{
-		std::cout << i << " " << std::string(counts[i], '#') << std::endl;
+		std::cout << i << ": " << std::string(counts[i], '#') << std::endl;
 	}
+	std::cout << std::string(counts[getMode()] + 5, '-') << std::endl;
+}
+
+void Histogram::displayInfo()
+{
+	std::cout << "\nINFO: " << std::endl;
+	std::cout << std::string(10, '-') << std::endl;
+	std::cout << "Mode: " << getMode() << std::endl;
+	std::cout << "Min: " << getMinValue() << std::endl;
+	std::cout << "Max: " << getMaxValue() << std::endl;
+	std::cout << std::string(10, '-') << std::endl;
 }
