@@ -53,13 +53,13 @@ namespace Hist
 
         HistogramBase() = delete;
 
-        HistogramBase(std::unique_ptr<Logger>);
+        HistogramBase(std::unique_ptr<Logger> logger) { m_log = move(logger); };
 
         HistogramBase(const HistogramBase&);
 
         HistogramBase(HistogramBase&&);
 
-        virtual ~HistogramBase();
+        virtual ~HistogramBase() {};
 
 
 
