@@ -129,12 +129,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\test.h" />
+    <ClInclude Include="src\RandomEintegerGenerator.h" />
     <ClInclude Include="src\Log.h" />
     <ClInclude Include="src\Histogram.h" />
     <ClInclude Include="src\HistogramBase.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\RandomEintegerGenerator.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Log.cpp" />
     <ClCompile Include="src\Histogram.cpp" />

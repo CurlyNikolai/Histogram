@@ -1,17 +1,22 @@
 #include "Histogram.h"
-#include "test.h"
+#include "RandomEintegergenerator.h"
+#include <iostream>
 
 int main()
 {
-	//Histogram* h = new Histogram(move(std::make_unique<Logger>()));
-	Histogram* h = new Histogram();
-	h->add(0);
-	h->add(1);
-	h->add(2);
-	h->add(3);
-	h->add(4);
-	h->add(5);
+	RandomEintegerGenerator rng;
+	Histogram h = Histogram();
+
+	for (int i = 0; i < 100; i++)
+	{
+		//h.add(rng(Uniform));
+		h.add(rng(Binomial));
+	}
 	
-	std::cout << "min: " << h->getMinValue() << std::endl;
-	std::cout << "max: " << h->getMaxValue() << std::endl;
+	std::cout << "mode: " << h.getMode() << std::endl;
+	std::cout << "min: " << h.getMinValue() << std::endl;
+	std::cout << "max: " << h.getMaxValue() << std::endl;
+	
+	h.displayDistribution();
+
 }

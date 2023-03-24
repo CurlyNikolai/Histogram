@@ -1,45 +1,68 @@
-#include <limits>
-#include "Histogram.h"
 #include <iostream>
 
-int MIN = std::numeric_limits<int>::min();
-int MAX = std::numeric_limits<int>::max();
+#include "Histogram.h"
 
 void Histogram::add(EInteger number)
 {
+	if (number > Hist::Four)
+	{
+		std::cout << "Number larger than max allowed value! Returning." << std::endl;
+		return;
+	}
+	if (number < Hist::Zero)
+	{
+		std::cout << "Number smaller than min allowed value! Returning." << std::endl;
+		return;
+	}
+
+	if (numbers.size() == 0)
+	{
+		min = number;
+		max = number;
+	}
+
+	if (number < min) min = number;
+	if (number > max) max = number;
+	
 	numbers.push_back(number);
+	counts[number]++;
 }
 
 void Histogram::add(int number)
 {
-	add((EInteger)number);
+	add(EInteger(number));
 }
 
 EInteger Histogram::getMode() const
 {
-	//for (auto i : numbers)
-	//{
-
-	//}
-	return EInteger();
+	int idx = 0;
+	int maxCount = 0;
+	for (int i = 0; i < sizeof(counts) / sizeof(int); i++)
+	{
+		if (counts[i] > maxCount)
+		{
+			idx = i;
+			maxCount = counts[i];
+		}
+	}
+	return EInteger(idx);
 }
 
 EInteger Histogram::getMinValue() const
 {
-	int currentMin = MAX;
-	for (auto i : numbers)
-	{
-		if ((int)i < currentMin) currentMin = i;
-	}
-	return (EInteger)currentMin;
+	return min;
 }
 
 EInteger Histogram::getMaxValue() const
 {
-	int currentMax = MIN;
-	for (auto i : numbers)
+	return max;
+}
+
+void Histogram::displayDistribution()
+{
+	std::cout << "DISTRIBUTION:" << std::endl;
+	for (int i = 0; i < sizeof(counts) / sizeof(int); i++)
 	{
-		if ((int)i > currentMax) currentMax = i;
+		std::cout << i << " " << std::string(counts[i], '#') << std::endl;
 	}
-	return (EInteger)currentMax;
 }
