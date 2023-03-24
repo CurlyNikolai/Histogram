@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Histogram/src/RandomEintegerGenerator.h Source File</title>
+<title>Histogram: Histogram/src/RandomEintegerGenerator.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Histogram
    </div>
   </td>
  </tr>
@@ -92,35 +92,26 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    Binomial = 1,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_random_einteger_generator.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="class_random_einteger_generator.html">RandomEintegerGenerator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_hist_1_1_random_einteger_generator_base.html">RandomEintegerGeneratorBase</a></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_function" href="class_random_einteger_generator.html#a410bdd115f7adc4fe02d10499ffcea6d">RandomEintegerGenerator</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    /***</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">     * Default operator for sampling random EIntegers</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">     * @return random EInteger</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    EInteger operator()();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    /***</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">     * Overloaded operator for sampling random EIntegers</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">     * Input enum specifies which distribution to use when sampling EIntegers</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">     * @param dist specifies which distribution to sample from</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">     * @return random EInteger</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    EInteger operator()(dist);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::mt19937 mt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::uniform_int_distribution&lt;&gt; dist_uniform;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::binomial_distribution&lt;&gt; dist_binom;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif </span><span class="comment">// !RANDOMEINTEGERGENERATOR_H</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_random_einteger_generator.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="class_random_einteger_generator.html">RandomEintegerGenerator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_hist_1_1_random_einteger_generator_base.html">RandomEintegerGeneratorBase</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_function" href="class_random_einteger_generator.html#a410bdd115f7adc4fe02d10499ffcea6d">RandomEintegerGenerator</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    EInteger <a class="code hl_function" href="class_random_einteger_generator.html#a37c9f3ff180ef33c7a7bd5bcd921682c">operator()</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    EInteger <a class="code hl_function" href="class_random_einteger_generator.html#a37c9f3ff180ef33c7a7bd5bcd921682c">operator()</a>(dist);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::mt19937 mt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::uniform_int_distribution&lt;&gt; dist_uniform;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::binomial_distribution&lt;&gt; dist_binom;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// !RANDOMEINTEGERGENERATOR_H</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="ttc" id="aclass_hist_1_1_random_einteger_generator_base_html"><div class="ttname"><a href="class_hist_1_1_random_einteger_generator_base.html">Hist::RandomEintegerGeneratorBase</a></div><div class="ttdef"><b>Definition:</b> HistogramBase.h:29</div></div>
-<div class="ttc" id="aclass_random_einteger_generator_html"><div class="ttname"><a href="class_random_einteger_generator.html">RandomEintegerGenerator</a></div><div class="ttdef"><b>Definition:</b> RandomEintegerGenerator.h:26</div></div>
+<div class="ttc" id="aclass_random_einteger_generator_html"><div class="ttname"><a href="class_random_einteger_generator.html">RandomEintegerGenerator</a></div><div class="ttdef"><b>Definition:</b> RandomEintegerGenerator.h:28</div></div>
+<div class="ttc" id="aclass_random_einteger_generator_html_a37c9f3ff180ef33c7a7bd5bcd921682c"><div class="ttname"><a href="class_random_einteger_generator.html#a37c9f3ff180ef33c7a7bd5bcd921682c">RandomEintegerGenerator::operator()</a></div><div class="ttdeci">EInteger operator()()</div><div class="ttdef"><b>Definition:</b> RandomEintegerGenerator.cpp:10</div></div>
 <div class="ttc" id="aclass_random_einteger_generator_html_a410bdd115f7adc4fe02d10499ffcea6d"><div class="ttname"><a href="class_random_einteger_generator.html#a410bdd115f7adc4fe02d10499ffcea6d">RandomEintegerGenerator::RandomEintegerGenerator</a></div><div class="ttdeci">RandomEintegerGenerator()</div><div class="ttdef"><b>Definition:</b> RandomEintegerGenerator.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

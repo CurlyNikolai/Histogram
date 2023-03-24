@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: RandomEintegerGenerator Class Reference</title>
+<title>Histogram: RandomEintegerGenerator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Histogram
    </div>
   </td>
  </tr>
@@ -93,15 +93,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a410bdd115f7adc4fe02d10499ffcea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37c9f3ff180ef33c7a7bd5bcd921682c"><td class="memItemLeft" align="right" valign="top">EInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_einteger_generator.html#a37c9f3ff180ef33c7a7bd5bcd921682c">operator()</a> ()</td></tr>
 <tr class="separator:a37c9f3ff180ef33c7a7bd5bcd921682c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2897cf0871ec0ad7393ed01cba944ea4"><td class="memItemLeft" align="right" valign="top"><a id="a2897cf0871ec0ad7393ed01cba944ea4" name="a2897cf0871ec0ad7393ed01cba944ea4"></a>
-EInteger&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (dist)</td></tr>
+<tr class="memitem:a2897cf0871ec0ad7393ed01cba944ea4"><td class="memItemLeft" align="right" valign="top">EInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_random_einteger_generator.html#a2897cf0871ec0ad7393ed01cba944ea4">operator()</a> (dist)</td></tr>
 <tr class="separator:a2897cf0871ec0ad7393ed01cba944ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ffb295573b1d3ed4e064ff30e27d156"><td class="memItemLeft" align="right" valign="top"><a id="a7ffb295573b1d3ed4e064ff30e27d156" name="a7ffb295573b1d3ed4e064ff30e27d156"></a>
-virtual EInteger&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> ()=0</td></tr>
+<tr class="memitem:a7ffb295573b1d3ed4e064ff30e27d156"><td class="memItemLeft" align="right" valign="top">virtual EInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hist_1_1_random_einteger_generator_base.html#a7ffb295573b1d3ed4e064ff30e27d156">operator()</a> ()=0</td></tr>
 <tr class="separator:a7ffb295573b1d3ed4e064ff30e27d156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class for generating random EIntegers Generates random EIntegers with a Mersenne-Twister, from either a uniform or binomial distribution </p>
+<div class="textblock"><p>A class for generating random EIntegers for a histogram Generates random EIntegers with a Mersenne-Twister, from either a uniform or binomial distribution. Restricted to generating EIntegers in the range 0-4 to coincide with the <a class="el" href="class_histogram.html">Histogram</a> class. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_histogram.html">Histogram</a>. </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a410bdd115f7adc4fe02d10499ffcea6d" name="a410bdd115f7adc4fe02d10499ffcea6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a410bdd115f7adc4fe02d10499ffcea6d">&#9670;&#160;</a></span>RandomEintegerGenerator()</h2>
@@ -117,13 +115,13 @@ virtual EInteger&#160;</td><td class="memItemRight" valign="bottom"><b>operator(
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor for initializing random EInteger generator The constructor initializes a mersenne twister rng with a uniform and binomial distribution available </p>
+<p>Constructor for initializing random EInteger generator. The constructor initializes a mersenne twister rng with distributions to sample from. Currently only a uniform and binomial distribution is available. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a37c9f3ff180ef33c7a7bd5bcd921682c" name="a37c9f3ff180ef33c7a7bd5bcd921682c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37c9f3ff180ef33c7a7bd5bcd921682c">&#9670;&#160;</a></span>operator()()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c9f3ff180ef33c7a7bd5bcd921682c">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,8 +142,34 @@ virtual EInteger&#160;</td><td class="memItemRight" valign="bottom"><b>operator(
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Default operator for sampling random EIntegers </p><dl class="section return"><dt>Returns</dt><dd>random EInteger </dd></dl>
 
 <p>Implements <a class="el" href="class_hist_1_1_random_einteger_generator_base.html">Hist::RandomEintegerGeneratorBase</a>.</p>
+
+</div>
+</div>
+<a id="a2897cf0871ec0ad7393ed01cba944ea4" name="a2897cf0871ec0ad7393ed01cba944ea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2897cf0871ec0ad7393ed01cba944ea4">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EInteger RandomEintegerGenerator::operator() </td>
+          <td>(</td>
+          <td class="paramtype">dist&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Overloaded operator for sampling random EIntegers. Input enum specifies which distribution to use when sampling EIntegers. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dist</td><td>specifies which distribution to sample from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>random EInteger. </dd></dl>
 
 </div>
 </div>
